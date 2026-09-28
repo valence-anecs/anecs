@@ -1,0 +1,13 @@
+{
+  "estimateId": "estimate:supplier-a:iso9001",
+  "subjectId": "supplier:a",
+  "predicate": "certification:iso9001",
+  "status": "Conflicting",
+  "canonicalValueJson": null,
+  "evidenceRelationIds": [
+    "evidence:registry:supports",
+    "evidence:website:contradicts"
+  ],
+  "validFrom": "2026-01-01T00:00:00Z",
+  "validTo": null
+}

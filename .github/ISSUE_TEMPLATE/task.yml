@@ -1,0 +1,32 @@
+name: Task
+description: A bounded implementation, documentation or data task.
+title: "[Task]: "
+labels: ["type:task", "status:triage"]
+body:
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Required outcome
+      description: Describe observable completion, not activity.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      placeholder: |
+        - [ ] Criterion one
+        - [ ] Criterion two
+    validations:
+      required: true
+  - type: textarea
+    id: trace
+    attributes:
+      label: Research and architecture trace
+      description: Related Epic, hypothesis, invariant, ADR or baseline.
+  - type: textarea
+    id: verification
+    attributes:
+      label: Verification command or evidence
+    validations:
+      required: true

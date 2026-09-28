@@ -1,0 +1,40 @@
+name: Experiment
+description: Specify one controlled run that evaluates a hypothesis.
+title: "[Experiment]: "
+labels: ["type:experiment", "status:triage"]
+body:
+  - type: input
+    id: hypothesis
+    attributes:
+      label: Hypothesis issue
+      placeholder: "#123"
+    validations:
+      required: true
+  - type: dropdown
+    id: condition
+    attributes:
+      label: Condition
+      options: [B0, B1, T1, T2, T3, T4]
+    validations:
+      required: true
+  - type: textarea
+    id: frozen_inputs
+    attributes:
+      label: Frozen inputs
+      description: Need, policy, candidate universe and source snapshot identifiers.
+    validations:
+      required: true
+  - type: textarea
+    id: protocol
+    attributes:
+      label: Procedure
+      description: Ordered, repeatable steps with stopping conditions.
+    validations:
+      required: true
+  - type: textarea
+    id: outputs
+    attributes:
+      label: Expected output package
+      description: Metrics, logs, hashes, evaluator labels and replay artifacts.
+    validations:
+      required: true

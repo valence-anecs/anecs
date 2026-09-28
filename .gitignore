@@ -1,0 +1,30 @@
+# .NET
+bin/
+obj/
+TestResults/
+*.user
+*.suo
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+python/.python-version
+
+# Editors
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# Local infrastructure
+.env
+artifacts/*
+!artifacts/.gitkeep
+postgres-data/
+
+# OS
+.DS_Store
+Thumbs.db

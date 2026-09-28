@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://valence-anecs.github.io/schemas/state-estimate.schema.json",
+  "title": "ANECS StateEstimate",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "estimateId",
+    "subjectId",
+    "predicate",
+    "status",
+    "evidenceRelationIds"
+  ],
+  "properties": {
+    "estimateId": { "type": "string", "minLength": 1 },
+    "subjectId": { "type": "string", "minLength": 1 },
+    "predicate": { "type": "string", "minLength": 1 },
+    "status": {
+      "type": "string",
+      "enum": ["Known", "Unknown", "Conflicting", "Unsupported"]
+    },
+    "canonicalValueJson": { "type": ["string", "null"] },
+    "evidenceRelationIds": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "uniqueItems": true
+    },
+    "validFrom": { "type": ["string", "null"], "format": "date-time" },
+    "validTo": { "type": ["string", "null"], "format": "date-time" }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": { "status": { "const": "Known" } },
+        "required": ["status"]
+      },
+      "then": {
+        "required": ["canonicalValueJson"],
+        "properties": { "canonicalValueJson": { "type": "string" } }
+      }
+    },
+    {
+      "if": {
+        "properties": { "status": { "enum": ["Unknown", "Conflicting", "Unsupported"] } },
+        "required": ["status"]
+      },
+      "then": {
+        "properties": { "canonicalValueJson": { "type": "null" } }
+      }
+    }
+  ]
+}

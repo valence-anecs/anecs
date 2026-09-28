@@ -1,0 +1,43 @@
+name: Hypothesis
+description: Define a falsifiable ANECS research claim before implementation or measurement.
+title: "[Hypothesis]: "
+labels: ["type:hypothesis", "status:triage"]
+body:
+  - type: textarea
+    id: statement
+    attributes:
+      label: Falsifiable statement
+      description: State one claim that can be rejected by evidence.
+    validations:
+      required: true
+  - type: textarea
+    id: baseline
+    attributes:
+      label: Baseline and treatment
+      description: Identify B0/B1 and the treatment condition being compared.
+    validations:
+      required: true
+  - type: textarea
+    id: measures
+    attributes:
+      label: Measures
+      description: List primary measures, units and aggregation rules.
+    validations:
+      required: true
+  - type: textarea
+    id: falsification
+    attributes:
+      label: Falsification condition
+      description: What observation would reject or materially weaken this claim?
+    validations:
+      required: true
+  - type: textarea
+    id: confounders
+    attributes:
+      label: Confounders and risks
+      description: Data leakage, evaluator bias, unequal source access, supplier burden or other risks.
+  - type: textarea
+    id: artifacts
+    attributes:
+      label: Required artifacts
+      description: Frozen Need, candidate universe, source manifest, rubric, fixtures and replay package.

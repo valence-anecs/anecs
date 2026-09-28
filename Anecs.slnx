@@ -1,0 +1,13 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Anecs.Api/Anecs.Api.csproj" />
+    <Project Path="src/Anecs.Cli/Anecs.Cli.csproj" />
+    <Project Path="src/Anecs.Contracts/Anecs.Contracts.csproj" />
+    <Project Path="src/Anecs.Core/Anecs.Core.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Anecs.Conformance.Tests/Anecs.Conformance.Tests.csproj" />
+    <Project Path="tests/Anecs.Core.Tests/Anecs.Core.Tests.csproj" />
+    <Project Path="tests/Anecs.Replay.Tests/Anecs.Replay.Tests.csproj" />
+  </Folder>
+</Solution>

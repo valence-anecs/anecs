@@ -1,0 +1,98 @@
+[
+  {
+    "key": "EPIC-001",
+    "title": "Bootstrap organization, repository and deterministic CI",
+    "labels": ["type:epic", "priority:p0", "workstream:infrastructure"],
+    "body": "## Outcome\nA contributor can open the dev container and run build, unit, conformance and replay checks from a clean clone.\n\n## Exit criteria\n- .NET and Python workspaces are reproducible\n- PostgreSQL starts through Compose\n- CI protects deterministic behavior\n- Governance and issue forms are present"
+  },
+  {
+    "key": "EPIC-002",
+    "title": "Define canonical ANECS contracts and invariants",
+    "labels": ["type:epic", "priority:p0", "workstream:contracts"],
+    "body": "Define Observation, Claim, EvidenceRelation, StateEstimate, Snapshot, SupplyProjection, DemandProjection, Gap, Readiness, DSU and ActionPackage with competency questions and negative fixtures."
+  },
+  {
+    "key": "EPIC-003",
+    "title": "Build the manufacturing identity and capability golden set",
+    "labels": ["type:epic", "priority:p0", "workstream:evaluation"],
+    "body": "Create the governed 20–30 organization golden set with source manifests, identity labels, capability evidence, evaluator disagreement and adjudication records."
+  },
+  {
+    "key": "EPIC-004",
+    "title": "Implement B0 manual and B1 catalog baselines",
+    "labels": ["type:epic", "priority:p0", "workstream:evaluation"],
+    "body": "Measure the current expert workflow and a conventional catalog/keyword workflow against frozen Needs, candidates and source snapshots."
+  },
+  {
+    "key": "EPIC-005",
+    "title": "Implement T1 semantic capability matching",
+    "labels": ["type:epic", "priority:p1", "workstream:contracts"],
+    "body": "Isolate the value of capability and requirement representation without evidence-state or DSU contributions."
+  },
+  {
+    "key": "EPIC-006",
+    "title": "Implement T2 identity-safe temporal evidence state",
+    "labels": ["type:epic", "priority:p1", "workstream:evidence"],
+    "body": "Add identity resolution, provenance, valid/acquisition time, conflict visibility and sealed snapshots while preserving the T1 candidate universe."
+  },
+  {
+    "key": "EPIC-007",
+    "title": "Implement T3 Decision Sensitive Unknown and P0 action policy",
+    "labels": ["type:epic", "priority:p1", "workstream:policy"],
+    "body": "Derive blockers and readiness, classify decision-sensitive unknowns and select the lowest-cost authorized action through deterministic policy P0."
+  },
+  {
+    "key": "EPIC-008",
+    "title": "Measure coordination utility and supplier burden",
+    "labels": ["type:epic", "priority:p1", "workstream:evaluation"],
+    "body": "Compare decision quality, interactions, contacts, waiting time, human minutes, model cost and supplier response effort across B0/B1/T1/T2/T3/T4."
+  },
+  {
+    "key": "EPIC-009",
+    "title": "Produce sealed snapshot and deterministic replay packages",
+    "labels": ["type:epic", "priority:p1", "workstream:evidence"],
+    "body": "Reproduce gap, readiness, DSU, action and rationale from pinned ontology, policy, ruleset and source snapshot versions."
+  },
+  {
+    "key": "EPIC-010",
+    "title": "Run manufacturing-to-logistics ontology transfer stress test",
+    "labels": ["type:epic", "workstream:evaluation"],
+    "body": "Measure extension size, transfer effort and representational failure before adding any new core primitive."
+  },
+  {
+    "key": "TASK-001",
+    "title": "Specify competency questions for the first vertical slice",
+    "labels": ["type:task", "priority:p0", "workstream:contracts"],
+    "body": "Write competency questions for Observation → Claim → StateEstimate → Snapshot → DSU → Action and link every question to at least one positive and negative fixture."
+  },
+  {
+    "key": "TASK-002",
+    "title": "Define canonical identifier and versioning rules",
+    "labels": ["type:task", "priority:p0", "workstream:contracts"],
+    "body": "Define stable IDs, content-addressed IDs, ontology/policy versions and breaking-change behavior for replay compatibility."
+  },
+  {
+    "key": "TASK-003",
+    "title": "Add identity merge guard fixtures",
+    "labels": ["type:task", "priority:p0", "workstream:evidence"],
+    "body": "Add ExactIdentity, PossibleIdentity and false-merge fixtures showing that PossibleIdentity cannot aggregate canonical evidence."
+  },
+  {
+    "key": "TASK-004",
+    "title": "Define frozen Need and candidate-universe manifest",
+    "labels": ["type:task", "priority:p0", "workstream:evaluation"],
+    "body": "Create a content-addressed manifest shared by every baseline and treatment condition."
+  },
+  {
+    "key": "TASK-005",
+    "title": "Define coordination utility event schema",
+    "labels": ["type:task", "priority:p0", "workstream:evaluation"],
+    "body": "Capture search, contact, waiting, human, model and supplier-effort events with consistent units and attribution."
+  },
+  {
+    "key": "DECISION-001",
+    "title": "Decide code and specification licensing boundary",
+    "labels": ["type:decision", "priority:p1"],
+    "body": "Choose whether code, schemas, documentation, fixtures and datasets use separate licenses before accepting external contributions or publishing releases."
+  }
+]

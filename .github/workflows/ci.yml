@@ -1,0 +1,43 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  dotnet:
+    name: .NET build and deterministic tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+      - run: dotnet restore Anecs.slnx
+      - run: dotnet build Anecs.slnx --no-restore --configuration Release
+      - run: dotnet test Anecs.slnx --no-build --configuration Release --logger trx --results-directory TestResults
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: dotnet-test-results
+          path: TestResults
+
+  python-and-fixtures:
+    name: Python and conformance fixtures
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+      - env:
+          PYTHONPATH: python/src
+        run: python -m compileall -q python/src python/tests
+      - env:
+          PYTHONPATH: python/src
+        run: python -m unittest discover -s python/tests -v
+      - run: python scripts/validate_fixtures.py

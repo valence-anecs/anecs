@@ -40,6 +40,7 @@ The recommended path is VS Code **Dev Containers** or GitHub Codespaces. The con
 
 ```bash
 cp .env.example .env
+# Set ANECS_POSTGRES_PASSWORD in .env before starting PostgreSQL.
 docker compose up -d postgres
 ./scripts/check.sh
 dotnet run --project src/Anecs.Api
@@ -49,6 +50,7 @@ On Windows PowerShell:
 
 ```powershell
 Copy-Item .env.example .env
+# Set ANECS_POSTGRES_PASSWORD in .env before starting PostgreSQL.
 docker compose up -d postgres
 ./scripts/check.ps1
 dotnet run --project src/Anecs.Api

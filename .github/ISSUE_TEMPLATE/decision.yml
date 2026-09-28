@@ -1,0 +1,36 @@
+name: Decision
+description: Record a semantic, architectural, experimental or governance decision.
+title: "[Decision]: "
+labels: ["type:decision", "status:triage"]
+body:
+  - type: dropdown
+    id: class
+    attributes:
+      label: Decision class
+      options: [Architectural, Semantic, Experimental, Governance]
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context and constraint
+    validations:
+      required: true
+  - type: textarea
+    id: options
+    attributes:
+      label: Options and trade-offs
+    validations:
+      required: true
+  - type: textarea
+    id: proposed
+    attributes:
+      label: Proposed decision
+    validations:
+      required: true
+  - type: textarea
+    id: consequences
+    attributes:
+      label: Expected consequences and reversal cost
+    validations:
+      required: true

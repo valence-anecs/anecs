@@ -1,0 +1,16 @@
+[
+  {"name":"type:epic","color":"5319E7","description":"Large validation or capability outcome"},
+  {"name":"type:hypothesis","color":"1D76DB","description":"Falsifiable research claim"},
+  {"name":"type:experiment","color":"0052CC","description":"Controlled hypothesis evaluation"},
+  {"name":"type:task","color":"0E8A16","description":"Bounded implementation or documentation work"},
+  {"name":"type:decision","color":"FBCA04","description":"Architecture, semantic or research decision"},
+  {"name":"type:defect","color":"D73A4A","description":"Invariant or expected behavior violation"},
+  {"name":"status:triage","color":"EDEDED","description":"Needs scope and priority review"},
+  {"name":"priority:p0","color":"B60205","description":"Blocks the active validation path"},
+  {"name":"priority:p1","color":"D93F0B","description":"Required for the current milestone"},
+  {"name":"workstream:contracts","color":"C5DEF5","description":"Canonical schemas and primitives"},
+  {"name":"workstream:evidence","color":"BFDADC","description":"Provenance, claims, conflict and time"},
+  {"name":"workstream:policy","color":"F9D0C4","description":"Gap, readiness, DSU and actions"},
+  {"name":"workstream:evaluation","color":"D4C5F9","description":"Baselines, experiments and metrics"},
+  {"name":"workstream:infrastructure","color":"BFE5BF","description":"Developer environment and CI"}
+]
